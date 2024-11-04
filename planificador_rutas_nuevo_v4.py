@@ -157,14 +157,17 @@ if uploaded_file is not None:
         "Calle Mar Tirreno, 8, 28830 San Fernando de Henares"
     ]
 
-    # Definir las direcciones específicas
-    direccion_opciones = ["Calle Oruro, 2, Madrid", "Calle Mar Tirreno, 8, San Fernando de Henares"]
+# Campo de entrada de texto en lugar de un selectbox
+    direccion_seleccionada = st.text_input("Introduce la dirección de punto de partida:")
 
-# Selectbox en Streamlit para que el usuario seleccione una dirección
-    direccion_seleccionada = st.selectbox("Selecciona la direccion de punto de partida:", direccion_opciones)
+# Verificar si el usuario ha ingresado una dirección
+    if direccion_seleccionada:
+        st.write(f"Has ingresado la dirección: {direccion_seleccionada}")
+    else:
+        st.write("Por favor, introduce una dirección para continuar.")
 
 # Filtrar el DataFrame eliminando cualquier dirección que no sea la seleccionada
-    df_4 = df_4[~df_4['DIRECCION_COMPLETA'].isin(direccion_opciones) | (df_4['DIRECCION_COMPLETA'] == direccion_seleccionada)]
+    df_4 = df_4[ df_4['DIRECCION_COMPLETA'] == direccion_seleccionada]
 
 
 # Si la dirección seleccionada no está en el DataFrame, añadirla
