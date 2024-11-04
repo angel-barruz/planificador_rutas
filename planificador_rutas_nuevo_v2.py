@@ -1,17 +1,16 @@
 import streamlit as st
 import pandas as pd
-#from geopy.distance import geodesic
+from geopy.distance import geodesic
 from geopy.geocoders import Nominatim
 import folium
 from streamlit_folium import st_folium
-#from geopy.adapters import RequestsAdapter
-#from requests.adapters import HTTPAdapter
-#import ssl
+from geopy.adapters import RequestsAdapter
+from requests.adapters import HTTPAdapter
+import ssl
 import numpy as np
 from io import BytesIO
 import re
-import os
-os.environ["GDAL_VERSION"] = "3.4.0"
+
 
 
 # Título de la aplicación
