@@ -10,7 +10,7 @@ import ssl
 import numpy as np
 from io import BytesIO
 import re
-
+import io
 
 
 # Título de la aplicación
@@ -237,7 +237,7 @@ if uploaded_file is not None:
     st.write(df_5)
 
      # Crear archivo Excel en memoria
-    output = BytesIO()
+    output = io.BytesIO()
     with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
         df_5.to_excel(writer, index=False, sheet_name='Datos_procesados')
 
