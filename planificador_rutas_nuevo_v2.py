@@ -17,7 +17,7 @@ import io
 st.title('Planificador de rutas 3.0')
 
 # Cargar el archivo Excel
-uploaded_file = st.file_uploader("Por favor, carga un archivo Excel", type=["xlsx", "xls"])
+uploaded_file = st.file_uploader("Por favor, carga un archivo Excel con las direcciones de la ruta a planificar", type=["xlsx", "xls"])
 
 def cargar_excel(uploaded_file):
     return pd.read_excel(uploaded_file)
