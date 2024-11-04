@@ -1,7 +1,9 @@
 streamlit
+streamlit_folium
 numpy
 pandas
 geopy
 folium
+
    
 
