@@ -1,3 +1,0 @@
-geopy
-folium
-streamlit_folium
