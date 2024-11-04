@@ -146,7 +146,7 @@ if uploaded_file is not None:
     df_4 = pd.concat([df_1, df_3], axis=1)
     df_4['AVISO'] = 'Sin Aviso'
     df_4 = df_4.sort_values(by=['CODIGO POSTAL'])
-    df_4 = df_4.drop['DIRECCION COMPLETA']
+    df_4 = df_4.drop('DIRECCION COMPLETA', axis=1)
 
         # Aplicar la función de limpiar_direccion a la columna DIRECCION_COMPLETA
     df_4['DIRECCION_COMPLETA'] = df_4['DIRECCION_COMPLETA'].apply(sustituir_ñ)
