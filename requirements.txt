@@ -1,0 +1,14 @@
+streamlit
+pip==24.3.1
+streamlit==1.25.0
+setuptools
+wheel==0.41.0
+pandas==2.0.2
+geopy==2.4.1
+folium==0.17.0
+streamlit-folium==0.23.0
+numpy==1.23.5
+distlib
+python==3.11
+   
+
