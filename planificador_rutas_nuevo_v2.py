@@ -201,8 +201,8 @@ if uploaded_file is not None:
                     siguiente_punto = punto
 
             orden_recorrido.append(siguiente_punto)
-            puntos_restantes.remove(siguiente_punto)
-            lat_actual, lon_actual = df_4.loc[siguiente_punto, 'Latitud'], df_4.loc[siguiente_punto, 'Longitud']
+            #puntos_restantes.remove(siguiente_punto)
+            #lat_actual, lon_actual = df_4.loc[siguiente_punto, 'Latitud'], df_4.loc[siguiente_punto, 'Longitud']
 
     # Crear DataFrame ordenado
         df_ordenado = df_4.loc[orden_recorrido].reset_index(drop=True)
