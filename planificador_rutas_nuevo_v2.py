@@ -102,7 +102,7 @@ geolocator = iniciar_geolocator()
 # Función para obtener coordenadas
 def obtener_coordenadas(direccion):
     try:
-        location = geolocator.geocode(direccion, country_codes='es', timeout=10)
+        location = geolocator.geocode(direccion, country_codes='es', timeout=60)
         if location:
             return (location.latitude, location.longitude)
         else:
