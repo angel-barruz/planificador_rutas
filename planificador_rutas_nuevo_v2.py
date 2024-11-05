@@ -177,7 +177,6 @@ if uploaded_file is not None:
     df_4['Orden'] = df_4['DIRECCION_COMPLETA'].apply(lambda x: 0 if x == direccion_seleccionada else 1)
     df_4 = df_4.sort_values(by='Orden').drop(columns='Orden').reset_index(drop=True)
 
-    st.write(df_4)
 
 # Aplicar la función para obtener latitud y longitud con cache
     df_4['Latitud'], df_4['Longitud'] = zip(*df_4['DIRECCION_COMPLETA'].apply(obtener_coordenadas))
