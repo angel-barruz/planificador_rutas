@@ -185,9 +185,9 @@ if uploaded_file is not None:
         puntos_restantes = list(df_4.index)
         orden_recorrido = [puntos_restantes.pop(0)]
 
-        while puntos_restantes:
-            ultimo_punto = orden_recorrido[-1]
-            lat_actual, lon_actual = df_4.loc[ultimo_punto, 'Latitud'], df_4.loc[ultimo_punto, 'Longitud']
+        #while puntos_restantes:
+            #ultimo_punto = orden_recorrido[-1]
+            #lat_actual, lon_actual = df_4.loc[ultimo_punto, 'Latitud'], df_4.loc[ultimo_punto, 'Longitud']
         
             #distancia_minima = float('inf')
             #siguiente_punto = None
