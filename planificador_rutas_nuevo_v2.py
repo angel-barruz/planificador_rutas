@@ -109,6 +109,7 @@ def obtener_coordenadas(direccion):
             st.warning(f"No se encontraron coordenadas para: {direccion}")
             return (None, None)
     except Exception as e:
+        
         st.error(f"Error obteniendo coordenadas para {direccion}: {e}")
         return (None, None)
 
