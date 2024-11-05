@@ -189,19 +189,19 @@ if uploaded_file is not None:
             ultimo_punto = orden_recorrido[-1]
             lat_actual, lon_actual = df_4.loc[ultimo_punto, 'Latitud'], df_4.loc[ultimo_punto, 'Longitud']
         
-            distancia_minima = float('inf')
-            siguiente_punto = None
+            #distancia_minima = float('inf')
+            #siguiente_punto = None
         
-            for punto in puntos_restantes:
-                lat_punto, lon_punto = df_4.loc[punto, 'Latitud'], df_4.loc[punto, 'Longitud']
-                distancia = haversine(lat_actual, lon_actual, lat_punto, lon_punto)
+            #for punto in puntos_restantes:
+                #lat_punto, lon_punto = df_4.loc[punto, 'Latitud'], df_4.loc[punto, 'Longitud']
+                #distancia = haversine(lat_actual, lon_actual, lat_punto, lon_punto)
             
-                if distancia < distancia_minima:
-                    distancia_minima = distancia
-                    siguiente_punto = punto
+                #if distancia < distancia_minima:
+                    #distancia_minima = distancia
+                    #siguiente_punto = punto
 
-            orden_recorrido.append(siguiente_punto)
-            puntos_restantes.remove(siguiente_punto)
+            #orden_recorrido.append(siguiente_punto)
+            #puntos_restantes.remove(siguiente_punto)
 
     # Crear DataFrame ordenado
         df_ordenado = df_4.loc[orden_recorrido].reset_index(drop=True)
